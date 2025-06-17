@@ -2,28 +2,24 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - echo "Install phase: No dependencies needed for HTML/CSS site"
-
-  pre_build:
-    commands:
-      - echo "Pre-build phase: Listing files"
-      - ls -la
+      - echo Installing dependencies...
+      - npm install
 
   build:
     commands:
-      - echo "Build phase: No build step needed for static site"
+      - echo Build started on $(date)
+      - echo Running app checks...
+      - node -v
+      - npm -v
+      - echo Build phase completed
 
   post_build:
     commands:
-      - echo "Post-build phase: Preparing artifacts"
-      - ls -la
+      - echo Post-build started on $(date)
 
 artifacts:
   files:
     - '**/*'
-  base-directory: .
-  discard-paths: no
-
-cache:
-  paths: []
