@@ -3,22 +3,22 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18  # Optional if not using Node
+      nodejs: 18
     commands:
-      - echo "Install phase: No dependencies needed for static site"
+      - echo "Installing dependencies (if any)..."
 
   pre_build:
     commands:
-      - echo "Pre-build phase: Verifying files"
+      - echo "Pre-build phase started"
       - ls -la
 
   build:
     commands:
-      - echo "Build phase: Nothing to compile for HTML/CSS"
+      - echo "Build phase (no build needed for static site)"
 
   post_build:
     commands:
-      - echo "Post-build phase: Files ready for deployment"
+      - echo "Post-build: preparing for deployment"
       - ls -la
 
 artifacts:
