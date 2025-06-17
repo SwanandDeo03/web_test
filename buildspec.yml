@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Optional, can be removed if not using npm
+    commands:
+      - echo "Install phase: No dependencies to install for static site"
+
+  pre_build:
+    commands:
+      - echo "Pre-build phase: Verifying files"
+      - ls -la
+
+  build:
+    commands:
+      - echo "Build phase: No build needed for static HTML/CSS site"
+
+  post_build:
+    commands:
+      - echo "Post-build phase: Preparing files for deployment"
+      - ls -la
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: .
+  discard-paths: no
+
+cache:
+  paths: []
