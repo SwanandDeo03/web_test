@@ -3,18 +3,19 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Install phase: No dependencies needed for HTML/CSS site"
+      - echo "Installing dependencies..."
   pre_build:
     commands:
-      - echo "Pre-build phase: Listing files"
+      - echo "Pre-build phase started"
       - ls -la
   build:
     commands:
-      - echo "Build phase: No build step needed for static site"
+      - echo "Build phase started"
+      - echo "Building static website..."
   post_build:
     commands:
-      - echo "Post-build phase: Preparing artifacts"
-      - ls -la
+      - echo "Post-build phase started"
+      - echo "Build completed successfully"
 
 artifacts:
   files:
