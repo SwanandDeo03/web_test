@@ -4,16 +4,13 @@ phases:
   install:
     commands:
       - echo "Install phase: No dependencies needed for HTML/CSS site"
-
   pre_build:
     commands:
       - echo "Pre-build phase: Listing files"
       - ls -la
-
   build:
     commands:
       - echo "Build phase: No build step needed for static site"
-
   post_build:
     commands:
       - echo "Post-build phase: Preparing artifacts"
@@ -26,4 +23,4 @@ artifacts:
   discard-paths: no
 
 cache:
-  paths: []
+  paths: [] 
